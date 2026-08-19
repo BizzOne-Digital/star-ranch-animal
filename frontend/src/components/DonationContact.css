@@ -1,0 +1,118 @@
+.donation-contact { background: var(--cream); }
+
+.donation-contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.donation-card,
+.contact-card {
+  padding: 48px 40px;
+}
+
+.donation-card h2,
+.contact-card h2 {
+  font-size: 1.75rem;
+  margin: 16px 0 12px;
+}
+
+.donation-card p {
+  font-size: 0.9375rem;
+  color: var(--charcoal);
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+.donation-card__amounts {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.donation-card__amount {
+  padding: 12px 24px;
+  border: 2px solid #d1d5db;
+  border-radius: 50px;
+  background: var(--white);
+  font-weight: 600;
+  color: var(--navy);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+}
+
+.donation-card__amount.active,
+.donation-card__amount:hover {
+  border-color: var(--red);
+  background: var(--red);
+  color: var(--white);
+}
+
+.donation-card__custom {
+  padding: 12px 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 50px;
+  width: 100px;
+  font-family: var(--font-sans);
+  text-align: center;
+}
+
+.donation-card__custom:focus {
+  outline: none;
+  border-color: var(--navy);
+}
+
+.donation-card__submit {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.contact-card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-card__list li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  color: var(--charcoal);
+}
+
+.contact-card__list li svg {
+  color: var(--navy);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-card__list strong {
+  display: block;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.contact-card__list span {
+  display: block;
+  font-size: 0.9375rem;
+}
+
+.contact-card__list a {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .donation-contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-card,
+  .contact-card {
+    padding: 32px 24px;
+  }
+}

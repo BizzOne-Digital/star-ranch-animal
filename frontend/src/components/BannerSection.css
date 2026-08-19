@@ -1,0 +1,50 @@
+.banner-section {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.banner-section__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-section__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 48, 74, 0.88);
+}
+
+.banner-section__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.banner-section__text h2 {
+  color: var(--white);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  margin-bottom: 12px;
+}
+
+.banner-section__text p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.0625rem;
+  max-width: 480px;
+}
+
+@media (max-width: 768px) {
+  .banner-section__content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-section__text p { margin: 0 auto; }
+}

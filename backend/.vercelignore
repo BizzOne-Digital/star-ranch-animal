@@ -1,0 +1,3 @@
+# Ignore local env files on Vercel
+.env
+.env.local
