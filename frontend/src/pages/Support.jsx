@@ -119,6 +119,19 @@ const Support = () => {
               </p>
             </form>
           </div>
+
+          <div className="card support-donate support-zelle">
+            <h2>Donate by Zelle</h2>
+            <p>
+              Scan the code below in your bank&apos;s app to send a donation directly to
+              Star Ranch Animal Sanctuary via Zelle.
+            </p>
+            <img src="/qr.jpg" alt="Zelle QR code for Star Ranch Animal Sanctuary" className="support-zelle__qr" />
+            <p className="support-zelle__note">
+              Prefer to send manually? Save <strong>602-328-6333</strong> as a contact
+              (Star Ranch Animal Sanctuary) in your bank&apos;s Zelle app and send your donation there.
+            </p>
+          </div>
         </div>
       </section>
 

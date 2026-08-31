@@ -62,3 +62,22 @@
   text-align: center;
   margin-top: 16px;
 }
+
+.support-zelle {
+  margin-top: 32px;
+}
+
+.support-zelle__qr {
+  max-width: 220px;
+  width: 100%;
+  margin: 0 auto 20px;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.support-zelle__note {
+  font-size: 0.875rem;
+  color: var(--charcoal);
+  text-align: center;
+}

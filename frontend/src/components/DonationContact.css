@@ -70,6 +70,32 @@
   margin-top: 8px;
 }
 
+.donation-card__zelle {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.donation-card__zelle h3 {
+  font-size: 1.125rem;
+  margin-bottom: 12px;
+}
+
+.donation-card__zelle img {
+  max-width: 160px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 12px;
+}
+
+.donation-card__zelle p {
+  font-size: 0.875rem;
+  color: var(--charcoal);
+  margin-bottom: 0;
+}
+
 .contact-card__list {
   list-style: none;
   display: flex;

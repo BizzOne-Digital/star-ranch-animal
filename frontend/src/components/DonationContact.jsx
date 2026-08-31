@@ -96,6 +96,15 @@ const DonationContact = ({ settings }) => {
               {loading ? 'Processing...' : 'Donate Securely'}
             </button>
           </form>
+
+          <div className="donation-card__zelle">
+            <h3>Or donate by Zelle</h3>
+            <img src="/qr.jpg" alt="Zelle QR code for Star Ranch Animal Sanctuary" />
+            <p>
+              Save <strong>602-328-6333</strong> as a Zelle contact
+              (Star Ranch Animal Sanctuary) and send your donation directly.
+            </p>
+          </div>
         </div>
 
         <div className="card contact-card">

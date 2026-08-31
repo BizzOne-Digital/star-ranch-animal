@@ -19,7 +19,10 @@ const Gallery = () => {
   const displayImages =
     images.length > 0
       ? images
-      : PLACEHOLDER_GALLERY.map((url, i) => ({ _id: i, imageUrl: url, caption: '' }));
+      : [
+          { _id: 'local-1', imageUrl: '/img2.jpg', caption: '' },
+          ...PLACEHOLDER_GALLERY.map((url, i) => ({ _id: i, imageUrl: url, caption: '' })),
+        ];
 
   return (
     <>
