@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import SEO from '../components/SEO';
 import api from '../services/api';
-import { PLACEHOLDER_GALLERY } from '../utils/constants';
 import './Gallery.css';
 
 const Gallery = () => {
@@ -15,14 +14,6 @@ const Gallery = () => {
       .catch(() => {})
       .finally(() => setLoading(false));
   }, []);
-
-  const displayImages =
-    images.length > 0
-      ? images
-      : [
-          { _id: 'local-1', imageUrl: '/img2.jpg', caption: '' },
-          ...PLACEHOLDER_GALLERY.map((url, i) => ({ _id: i, imageUrl: url, caption: '' })),
-        ];
 
   return (
     <>
@@ -42,9 +33,11 @@ const Gallery = () => {
         <div className="container">
           {loading ? (
             <div className="loading-spinner" />
+          ) : images.length === 0 ? (
+            <p className="gallery-empty">No photos yet — check back soon.</p>
           ) : (
             <div className="gallery-grid">
-              {displayImages.map((img) => (
+              {images.map((img) => (
                 <button
                   key={img._id}
                   className="gallery-grid__item"
