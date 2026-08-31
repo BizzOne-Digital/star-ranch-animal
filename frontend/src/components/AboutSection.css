@@ -9,8 +9,6 @@
 
 .about-section__image {
   width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
@@ -19,11 +17,9 @@
 .about-section__image img {
   width: 100%;
   height: auto;
-  max-height: 560px;
   display: block;
   object-fit: contain;
   object-position: center;
-  margin: 0 auto;
 }
 
 .about-section__content {
