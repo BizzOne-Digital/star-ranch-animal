@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { DEFAULT_ABOUT_IMAGE } from '../utils/constants';
 import { ABOUT_CONTENT } from '../utils/aboutContent';
 import './AboutSection.css';
 
 const AboutSection = ({ settings }) => {
   const about = settings?.about || {};
   const { ref, isVisible } = useScrollAnimation();
-  const imageUrl = about.imageUrl || DEFAULT_ABOUT_IMAGE;
+  const imageUrl = about.imageUrl || '/img2.jpg';
 
   const paragraphs = about.description
     ? [about.description, ...ABOUT_CONTENT.homeParagraphs.slice(1)]

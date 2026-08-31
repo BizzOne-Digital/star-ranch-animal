@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import api from '../services/api';
-import { DEFAULT_ABOUT_IMAGE } from '../utils/constants';
 import { ABOUT_CONTENT } from '../utils/aboutContent';
 import './About.css';
 
@@ -14,7 +13,7 @@ const About = () => {
   }, []);
 
   const about = settings?.about || {};
-  const imageUrl = about.imageUrl || DEFAULT_ABOUT_IMAGE;
+  const imageUrl = about.imageUrl || '/img1.jpg';
 
   return (
     <>
