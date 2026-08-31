@@ -169,6 +169,45 @@ const Services = () => {
         </div>
       </section>
 
+      <section className="section services-suppliers">
+        <div className="container">
+          <div className="services-page__header">
+            <span className="section-label">Where We Get Our Supplies</span>
+            <h2 className="section-title">Feed & Food Partners</h2>
+          </div>
+          <div className="services-page__grid services-page__grid--two">
+            <article className="card services-page__card">
+              <h2>Dog & Cat Food</h2>
+              <p className="services-page__desc">
+                We source quality food for our dogs and cats from Gentle Giants Pet Products.
+              </p>
+              <a
+                href="https://gentlegiantspetproducts.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+              >
+                Visit Gentle Giants Pet Products
+              </a>
+            </article>
+            <article className="card services-page__card">
+              <h2>Horse Feed</h2>
+              <p className="services-page__desc">
+                Our horses are fed Awesome Feed, sourced from The Pet Food Warehouse.
+              </p>
+              <a
+                href="https://thepetfoodwarehouse.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+              >
+                Visit The Pet Food Warehouse
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className="section services-process">
         <div className="container">
           <div className="services-page__header">
