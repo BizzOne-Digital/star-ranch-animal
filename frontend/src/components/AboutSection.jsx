@@ -6,7 +6,7 @@ import './AboutSection.css';
 const AboutSection = ({ settings }) => {
   const about = settings?.about || {};
   const { ref, isVisible } = useScrollAnimation();
-  const imageUrl = about.imageUrl || '/img2.jpg';
+  const imageUrl = about.imageUrl || '/img4.jpg';
 
   const paragraphs = about.description
     ? [about.description, ...ABOUT_CONTENT.homeParagraphs.slice(1)]

@@ -13,7 +13,7 @@ const About = () => {
   }, []);
 
   const about = settings?.about || {};
-  const imageUrl = about.imageUrl || '/img1.jpg';
+  const imageUrl = about.imageUrl || '/img3.jpg';
 
   return (
     <>
