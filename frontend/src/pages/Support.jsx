@@ -129,7 +129,7 @@ const Support = () => {
             <img src="/qr.jpg" alt="Zelle QR code for Star Ranch Animal Sanctuary" className="support-zelle__qr" />
             <p className="support-zelle__note">
               Prefer to send manually? Download the Zelle app and save{' '}
-              <strong>Joyce Robinson, 602-318-0260</strong> as a contact. Your donation and
+              <strong>Joyce Robinson, 602-328-6333</strong> as a contact. Your donation and
               receipt will show as Star Ranch Animal Sanctuary.
             </p>
           </div>
