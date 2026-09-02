@@ -77,6 +77,12 @@
   text-align: center;
 }
 
+.donation-card__zelle--solo {
+  margin-top: 20px;
+  padding-top: 0;
+  border-top: none;
+}
+
 .donation-card__zelle h3 {
   font-size: 1.125rem;
   margin-bottom: 12px;

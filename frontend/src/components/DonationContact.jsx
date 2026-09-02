@@ -1,45 +1,10 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Lock, MapPin, Phone, Mail } from 'lucide-react';
-import toast from 'react-hot-toast';
-import api from '../services/api';
-import { DONATION_AMOUNTS } from '../utils/constants';
+import { Heart, MapPin, Phone, Mail } from 'lucide-react';
 import './DonationContact.css';
 
 const DonationContact = ({ settings }) => {
   const contact = settings?.contact || {};
   const donation = settings?.donation || {};
-  const [amount, setAmount] = useState(50);
-  const [customAmount, setCustomAmount] = useState('');
-  const [donorName, setDonorName] = useState('');
-  const [email, setEmail] = useState('');
-  const [loading, setLoading] = useState(false);
-
-  const handleDonate = async (e) => {
-    e.preventDefault();
-    const finalAmount = customAmount ? Number(customAmount) : amount;
-    if (!finalAmount || finalAmount < 1) {
-      toast.error('Please enter a valid donation amount');
-      return;
-    }
-
-    setLoading(true);
-    try {
-      await api.post('/donations', {
-        donorName: donorName || 'Anonymous',
-        email,
-        amount: finalAmount,
-      });
-      toast.success('Thank you! Your donation has been recorded. Payment integration can be connected.');
-      setDonorName('');
-      setEmail('');
-      setCustomAmount('');
-    } catch {
-      toast.error('Something went wrong. Please try again.');
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <section className="section donation-contact">
@@ -52,53 +17,8 @@ const DonationContact = ({ settings }) => {
               'Your support helps provide food, shelter, medical care, and compassion for animals who need a safe place.'}
           </p>
 
-          <form onSubmit={handleDonate}>
-            <div className="donation-card__amounts">
-              {DONATION_AMOUNTS.map((a) => (
-                <button
-                  key={a}
-                  type="button"
-                  className={`donation-card__amount ${amount === a && !customAmount ? 'active' : ''}`}
-                  onClick={() => { setAmount(a); setCustomAmount(''); }}
-                >
-                  ${a}
-                </button>
-              ))}
-              <input
-                type="number"
-                placeholder="Custom"
-                className="donation-card__custom"
-                value={customAmount}
-                onChange={(e) => setCustomAmount(e.target.value)}
-                min="1"
-              />
-            </div>
-
-            <div className="form-group">
-              <input
-                type="text"
-                placeholder="Your name (optional)"
-                value={donorName}
-                onChange={(e) => setDonorName(e.target.value)}
-              />
-            </div>
-            <div className="form-group">
-              <input
-                type="email"
-                placeholder="Email (optional, for receipt)"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-
-            <button type="submit" className="btn btn-primary donation-card__submit" disabled={loading}>
-              <Lock size={18} />
-              {loading ? 'Processing...' : 'Donate Securely'}
-            </button>
-          </form>
-
-          <div className="donation-card__zelle">
-            <h3>Or donate by Zelle</h3>
+          <div className="donation-card__zelle donation-card__zelle--solo">
+            <h3>Donate by Zelle</h3>
             <div className="donation-card__zelle-details">
               <strong>Star Ranch Animal Sanctuary</strong>
               <span>(602) 328-6333</span>
