@@ -82,6 +82,21 @@
   margin-bottom: 12px;
 }
 
+.donation-card__zelle-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 16px;
+  font-size: 0.875rem;
+  color: var(--charcoal);
+}
+
+.donation-card__zelle-details strong {
+  color: var(--navy);
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
 .donation-card__zelle img {
   max-width: 160px;
   width: 100%;

@@ -67,6 +67,21 @@
   margin-top: 32px;
 }
 
+.support-zelle__details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 16px;
+  font-size: 0.875rem;
+  color: var(--charcoal);
+}
+
+.support-zelle__details strong {
+  color: var(--navy);
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
 .support-zelle__qr {
   max-width: 220px;
   width: 100%;

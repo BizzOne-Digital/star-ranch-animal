@@ -99,6 +99,11 @@ const DonationContact = ({ settings }) => {
 
           <div className="donation-card__zelle">
             <h3>Or donate by Zelle</h3>
+            <div className="donation-card__zelle-details">
+              <strong>Star Ranch Animal Sanctuary</strong>
+              <span>(602) 328-6333</span>
+              <span>Bus Complete Chk (...2452)</span>
+            </div>
             <img src="/newqr.jpg" alt="Zelle QR code for Star Ranch Animal Sanctuary" />
             <p>
               Save <strong>Joyce Robinson, 602-328-6333</strong> as a Zelle contact.
