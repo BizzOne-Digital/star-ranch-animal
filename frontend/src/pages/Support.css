@@ -85,10 +85,19 @@
 .support-zelle__qr {
   max-width: 220px;
   width: 100%;
-  margin: 0 auto 20px;
+  margin: 0 auto;
   display: block;
   border-radius: 8px;
   border: 1px solid #e5e7eb;
+}
+
+.support-zelle__logo {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #6d1ed4;
+  margin: 4px 0 20px;
 }
 
 .support-zelle__note {
