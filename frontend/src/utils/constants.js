@@ -31,7 +31,7 @@ export const BOOKING_STATUSES = ['New', 'Reviewing', 'Contacted', 'Accepted', 'C
 export const DONATION_AMOUNTS = [25, 50, 100];
 
 export const DEFAULT_HERO_IMAGE =
-  '/hero.png';
+  '/heronew.png';
 export const DEFAULT_ABOUT_IMAGE =
   '/about.png';
 export const DEFAULT_BANNER_IMAGE =
