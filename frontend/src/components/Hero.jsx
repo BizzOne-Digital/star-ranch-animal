@@ -10,10 +10,18 @@ const Hero = ({ settings }) => {
   return (
     <section className="hero">
       <div className="hero__bg">
-        <picture>
-          {!hero.imageUrl && <source media="(max-width: 640px)" srcSet="/mobile-hero.png" />}
-          <img src={imageUrl} alt="Rescued animals at Star Ranch Animal Sanctuary" />
-        </picture>
+        {!hero.imageUrl && (
+          <img
+            src="/mobile-hero.png"
+            alt="Rescued animals at Star Ranch Animal Sanctuary"
+            className="hero__img--mobile"
+          />
+        )}
+        <img
+          src={imageUrl}
+          alt="Rescued animals at Star Ranch Animal Sanctuary"
+          className={!hero.imageUrl ? 'hero__img--desktop' : ''}
+        />
         <div className="hero__overlay" />
       </div>
       <div className="container hero__content">
